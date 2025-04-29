@@ -1,115 +1,119 @@
-import React from 'react';
+import React from "react";
 
 const ServiceArea: React.FC = () => {
+  const assets = [
+    {
+      title: "Forex",
+      description: "Forex is a global market for trading currencies.",
+      image: "/img/forex.webp",
+    },
+    {
+      title: "Blockchain",
+      description: "Blockchain is a global market for trading currencies.",
+      image: "/img/blockchain.webp",
+    },
+    {
+      title: "Stocks",
+      description: "Stocks is a global market for trading currencies.",
+      image: "/img/stocks.webp",
+    },
+    {
+      title: "Mutual Funds",
+      description: "Mutual Funds is a global market for trading currencies.",
+      image: "/img/mutual-fund.webp",
+    },
+  ];
   return (
     <section className="service-area">
       <div className="container">
         <div className="service-area-inner section-spacing-bottom">
           <div className="shape-1">
-            <img src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-10.webp" alt="shape image" />
+            <img
+              src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-10.webp"
+              alt="shape image"
+            />
           </div>
           <div className="shape-2">
-            <img src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-9.webp" alt="shape image" />
+            <img
+              src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-9.webp"
+              alt="shape image"
+            />
           </div>
           <div className="shape-3">
-            <img src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-12.webp" alt="shape image" />
+            <img
+              src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-12.webp"
+              alt="shape image"
+            />
           </div>
           <div className="shape-4">
-            <img src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-11.webp" alt="shape image" />
+            <img
+              src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-11.webp"
+              alt="shape image"
+            />
           </div>
           <div className="section-header">
             <div className="section-title-wrapper">
               <div className="subtitle-wrapper">
-                <span className="section-subtitle has-left-line has_fade_anim">Key Features</span>
+                <span className="section-subtitle has-left-line has_fade_anim"></span>
               </div>
               <div className="title-wrapper">
-                <h2 className="section-title has_text_move_anim">Services we provide</h2>
+                <h2
+                  style={{
+                    color: "#fff",
+                    fontWeight: "bold",
+                  }}
+                  className="section-title has_text_move_anim"
+                >
+                  ASSETS
+                </h2>
               </div>
             </div>
             <div className="text-wrapper">
               <p className="text has_fade_anim">
-                Whether it's crafting a visually stunning brand identity, designing immersive digital experiences
+                We provide specific and dedicated education on trading related
+                subjects and our flexible learning solutions connect our
+                students globally.
               </p>
             </div>
           </div>
           <div className="services-wrapper-box">
             <div className="services-wrapper">
-              <div className="service-box has_fade_anim" data-delay="0.15">
-                <a href="https://crowdytheme.com/html/arolax/service-details.html">
-                  <div className="thumb">
-                    <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/icon-s-5.webp" alt="service image" />
-                  </div>
-                  <div className="content">
-                    <h2 className="title">Development</h2>
-                    <p className="text">
-                      Development and building amazing digital products with best user experiences strategy.
-                    </p>
-                    <div className="btn-wrapper">
-                      <span className="cf_btn wc-btn-normal">
-                        Learn more
-                        <i className="fa-solid fa-arrow-right-long"></i>
-                      </span>
+              {assets.map((asset, index) => (
+                <div
+                  key={index}
+                  className="service-box has_fade_anim"
+                  data-delay="0.15"
+                >
+                  <a href="https://crowdytheme.com/html/arolax/service-details.html">
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                      className="thumb"
+                    >
+                      <img
+                        style={{
+                          scale: "1.5",
+                        }}
+                        src={asset.image}
+                        alt="service image"
+                      />
                     </div>
-                  </div>
-                </a>
-              </div>
-              <div className="service-box has_fade_anim" data-delay="0.30">
-                <a href="https://crowdytheme.com/html/arolax/service-details.html">
-                  <div className="thumb">
-                    <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/icon-s-6.webp" alt="service image" />
-                  </div>
-                  <div className="content">
-                    <h2 className="title">Marketing</h2>
-                    <p className="text">
-                      Marketing services starts and ends within a strategy builds wireframe & solid prototyping
-                    </p>
-                    <div className="btn-wrapper">
-                      <span className="cf_btn wc-btn-normal">
-                        Learn more
-                        <i className="fa-solid fa-arrow-right-long"></i>
-                      </span>
+                    <div className="content">
+                      <h2 className="title">{asset.title}</h2>
+                      <p className="text">{asset.description}</p>
+                      <div className="btn-wrapper">
+                        <span className="cf_btn wc-btn-normal">
+                          Learn more
+                          <i className="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </div>
-              <div className="service-box has_fade_anim" data-delay="0.45">
-                <a href="https://crowdytheme.com/html/arolax/service-details.html">
-                  <div className="thumb">
-                    <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/icon-s-7.webp" alt="service image" />
-                  </div>
-                  <div className="content">
-                    <h2 className="title">Design</h2>
-                    <p className="text">
-                      We design professional looking yet simple Logo are search engine and user friendly.
-                    </p>
-                    <div className="btn-wrapper">
-                      <span className="cf_btn wc-btn-normal">
-                        Learn more
-                        <i className="fa-solid fa-arrow-right-long"></i>
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <div className="service-box has_fade_anim" data-delay="0.60">
-                <a href="https://crowdytheme.com/html/arolax/service-details.html">
-                  <div className="thumb">
-                    <img src="https://crowdytheme.com/html/arolax/assets/imgs/icon/icon-s-8.webp" alt="service image" />
-                  </div>
-                  <div className="content">
-                    <h2 className="title">Technology</h2>
-                    <p className="text">
-                      Social media posts design Infographic design and email imagery security and updates.
-                    </p>
-                    <div className="btn-wrapper">
-                      <span className="cf_btn wc-btn-normal">
-                        Learn more
-                        <i className="fa-solid fa-arrow-right-long"></i>
-                      </span>
-                    </div>
-                  </div>
-                </a>
-              </div>
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
         </div>

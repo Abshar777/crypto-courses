@@ -2,7 +2,42 @@ import React from "react";
 
 const WorksSection: React.FC = () => {
   return (
-    <section className="works-area">
+    <section
+      style={{
+        position: "relative",
+      }}
+      className="works-area"
+    >
+      <div
+        style={{
+          position: "absolute",
+          top:"0",
+          left:"100",
+          width: "50%",
+          height: "50%",
+          backgroundColor: "#7963ff",
+          filter: "blur(100px)",
+          opacity: "0.1",
+          // zIndex:"-1",
+          borderRadius: "50%",
+          // transform:"translate(-50%,-50%)",
+        }}
+      ></div>
+      <div
+        style={{
+          position: "absolute",
+          top:"600",
+          right:"0",
+          width: "50%",
+          height: "50%",
+          backgroundColor: "#7963ff",
+          filter: "blur(100px)",
+          opacity: "0.1",
+          // zIndex:"-1",
+          borderRadius: "50%",
+          // transform:"translate(-50%,-50%)",
+        }}
+      ></div>
       <div className="container">
         <div className="works-area-inner section-spacing-bottom">
           <div className="shape-1">
@@ -23,12 +58,12 @@ const WorksSection: React.FC = () => {
             <div className="section-title-wrapper">
               <div className="subtitle-wrapper overflow-hidden">
                 <span className="section-subtitle has-left-line has_fade_anim">
-                  Work Showcase
+                  OUR COURSES
                 </span>
               </div>
               <div className="title-wrapper">
                 <h2 className="section-title has_text_move_anim">
-                  Some featured works
+                  OUR PREMIUM COURSES
                 </h2>
               </div>
             </div>
@@ -40,43 +75,15 @@ const WorksSection: React.FC = () => {
                 {
                   title: "Haliya Mono",
                   tag: "Design - 2024",
-                  img: "https://crowdytheme.com/html/arolax/assets/imgs/works/img-s-1.webp",
+                  img: "/img/course.jpg",
                   delay: "0.15",
                   direction: "left",
                 },
                 {
                   title: "Atlas Chatart",
                   tag: "Branding - 2023",
-                  img: "https://crowdytheme.com/html/arolax/assets/imgs/works/img-s-2.webp",
+                  img: "/img/course.jpg",
                   delay: "0.30",
-                  direction: "right",
-                },
-                {
-                  title: "O-Mobilya",
-                  tag: "Design - 2024",
-                  img: "https://crowdytheme.com/html/arolax/assets/imgs/works/img-s-3.webp",
-                  delay: "0.45",
-                  direction: "left",
-                },
-                {
-                  title: "Brandom Asly",
-                  tag: "Branding - 2023",
-                  img: "https://crowdytheme.com/html/arolax/assets/imgs/works/img-s-4.webp",
-                  delay: "0.60",
-                  direction: "right",
-                },
-                {
-                  title: "Kutober Jake",
-                  tag: "Design - 2024",
-                  img: "https://crowdytheme.com/html/arolax/assets/imgs/works/img-s-5.webp",
-                  delay: "0.75",
-                  direction: "left",
-                },
-                {
-                  title: "Flat Illustration",
-                  tag: "Branding - 2023",
-                  img: "https://crowdytheme.com/html/arolax/assets/imgs/works/img-s-6.webp",
-                  delay: "1",
                   direction: "right",
                 },
               ].map((item, index) => (
@@ -88,8 +95,39 @@ const WorksSection: React.FC = () => {
                 >
                   <a href="https://crowdytheme.com/html/arolax/work-details.html">
                     <div className="work-box">
-                      <div className="thumb">
-                        <img src={item.img} alt="work image" />
+                      <div
+                        style={{
+                          backgroundColor: "#1b1b1b",
+
+                          objectFit: "cover",
+
+                          position: "relative",
+                        }}
+                        className="thumb"
+                      >
+                        <img
+                          style={{
+                            borderRadius: "20px",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                          // style={{ opacity: "0" }}
+                          src={item.img}
+                          alt="work image"
+                        />
+                        <img
+                          // style={{ opacity: "0" }}
+                          src={item.img}
+                          style={{
+                            position: "absolute",
+                            filter: "blur(1rem)",
+                            opacity: "1",
+                            left: "0",
+                            zIndex: "-1",
+                          }}
+                          alt="work image"
+                        />
                       </div>
                       <div className="content">
                         <h2 className="title">{item.title}</h2>
@@ -109,7 +147,7 @@ const WorksSection: React.FC = () => {
               href="https://crowdytheme.com/html/arolax/works.html"
               className="wc-btn wc-btn-primary btn-text-flip bordered"
             >
-              <span data-text="View all works">View all works</span>
+              <span data-text="View all works">View all Courses</span>
             </a>
           </div>
         </div>

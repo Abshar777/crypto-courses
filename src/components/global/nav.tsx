@@ -1,3 +1,5 @@
+"use client";
+import { useIsMobile } from "@/hooks/use-mobile";
 import { useEffect } from "react";
 
 import { useState } from "react";
@@ -38,26 +40,56 @@ const Header = () => {
       link: "/contact",
     },
   ];
+
+  const isMobile = useIsMobile();
   return (
-    <header className={`header-area sticky`}>
+    <header
+      style={{
+        backgroundColor: "#00000000",
+        backdropFilter: "blur(25px)",
+      }}
+      className={`header-area sticky`}
+    >
       <div className="container large">
         <div className="header-area__inner">
-          <div className="header__logo">
-            <a href="#">
-              {/* bootstarp classe */}
-              <h1 className="text- fw-bold ">Delta</h1>
-            </a>
+          <div
+            style={{
+              width: "100px",
+              height: "100px",
+              padding: "1rem",
+              transform: isMobile
+                ? "translateY(1px) scale(1.2)"
+                : "translateX(20px)",
+            }}
+            className="header__logo"
+          >
+            {/* bootstarp classe */}
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                filter: "hue-rotate(45deg)",
+              }}
+              className="show-dark"
+              src="/img/logo.png"
+              alt="Site Logo"
+            />
           </div>
           <div className="header__nav">
-            <nav className="main-menu">
+            <nav suppressHydrationWarning className="main-menu">
               <ul>
-                {/* <li> */}
-                {navItems.map((item) => (
-                  <li key={item.id}>
-                    <a href={item.link}>{item.name}</a>
-                  </li>
-                ))}
-                {/* </li> */}
+                {!isMobile &&
+                  navItems.map((item) => (
+                    <li className="menu-item" key={item.id}>
+                      <a
+                        style={{ fontFamily: "monospace", fontSize: "18px" }}
+                        href={item.link}
+                      >
+                        {item.name}
+                      </a>
+                    </li>
+                  ))}
               </ul>
             </nav>
           </div>
@@ -69,7 +101,12 @@ const Header = () => {
               <span data-text="Get started">Get started</span>
             </a>
           </div>
-          <div className="header__navicon d-xl-none">
+          <div
+            style={{
+              display: "none",
+            }}
+            className="header__navicon d-xl-none"
+          >
             <button className="open-offcanvas">
               <i className="fa-solid fa-bars"></i>
             </button>

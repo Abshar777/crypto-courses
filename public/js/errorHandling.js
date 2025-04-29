@@ -468,28 +468,29 @@ mm.add("(min-width: 1024px)", () => {
 
 const path = document.getElementById("decorativePath");
 
-// Set initial state
-gsap.set(path, {
-  strokeDasharray: path.getTotalLength(),
-  strokeDashoffset: path.getTotalLength(),
-});
+if (path) {
+  // Set initial state
+  gsap.set(path, {
+    strokeDasharray: path.getTotalLength(),
+    strokeDashoffset: path.getTotalLength(),
+  });
 
-// Create the animation
-gsap.to(path, {
-  strokeDashoffset: 0,
-  duration: 1.5,
-  ease: "power2.out",
-  scrollTrigger: {
-    trigger: path,
-    start: "top center",
-    end: "top top",
+  // Create the animation
+  gsap.to(path, {
+    strokeDashoffset: 0,
+    duration: 1.5,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: path,
+      start: "top center",
+      end: "top top",
 
-    // markers:true,
-    toggleActions: "play none none reverse",
-    scrub: true,
-  },
-});
-
+      // markers:true,
+      toggleActions: "play none none reverse",
+      scrub: true,
+    },
+  });
+}
 
 const overlays = gsap.utils.toArray(".overlay");
 overlays.forEach((e, i) => {
@@ -497,22 +498,20 @@ overlays.forEach((e, i) => {
     opacity: 0,
     ease: "power2.out",
     duration: 0.3,
-    delay: .15,
+    delay: 0.15,
     scrollTrigger: {
-        // markers:true,
+      // markers:true,
       trigger: e,
       start: "top center+=50",
       scrub: true,
-      
-    }
-};
-gsap.to(e,animation_settings)
+    },
+  };
+  gsap.to(e, animation_settings);
 });
 
-gsap.to(".heroOverlay",{
-    opacity:0,
-    ease:"power2.out",
-    duration:.3,
-    delay:2,
-})
-
+gsap.to(".heroOverlay", {
+  opacity: 0,
+  ease: "power2.out",
+  duration: 0.3,
+  delay: 2,
+});

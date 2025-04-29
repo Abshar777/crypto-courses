@@ -3140,7 +3140,7 @@ h5 {
 h6 {
   font-size: 18px;
 }
-@font-face {
+/* @font-face {
   font-family: "recoleta";
   src: url("../fonts/recoleta/Latinotype - Recoleta Medium.otf");
   font-display: swap;
@@ -3171,7 +3171,7 @@ h6 {
   font-family: "bonvivant";
   src: url("../fonts/BonVivant/BonVivant-Regular.ttf");
   font-display: swap;
-}
+} */
 :root {
   --font_recoleta: "recoleta";
   --font_teko: "Teko", sans-serif;
@@ -3413,7 +3413,7 @@ h6 {
   height: 100vh;
   background-repeat: repeat;
   background-position: top left;
-  background-image: url(../imgs/writer/body-bg.webp);
+  /* background-image: url(../imgs/writer/body-bg.webp); */
 }
 .container-xl {
   max-width: 1550px;
@@ -3954,7 +3954,7 @@ h6 {
   content: "";
   position: absolute;
   inset-inline-start: 0;
-  background-image: url("../imgs/electrician/check-mark.webp");
+  /* background-image: url("../imgs/electrician/check-mark.webp"); */
   background-repeat: no-repeat;
   width: 14px;
   height: 14px;
@@ -4628,7 +4628,7 @@ section {
   cursor: pointer;
   text-align: left;
   color: var(--white);
-  background-image: url(../imgs/writer/go-top.webp);
+  /* background-image: url(../imgs/writer/go-top.webp); */
   background-position: right center;
   background-repeat: no-repeat;
   right: 16%;
@@ -4639,7 +4639,7 @@ section {
 }
 .dark .go-top-writer {
   color: var(--black);
-  background-image: url(../imgs/writer/go-top-light.webp);
+  /* background-image: url(../imgs/writer/go-top-light.webp); */
 }
 .go-top-writer:hover {
   color: var(--primary);
@@ -4714,7 +4714,7 @@ section {
 .light.go-top-writer {
   color: var(--black);
   background-color: rgba(0, 0, 0, 0);
-  background-image: url(../imgs/writer/go-top-light.webp);
+  /* background-image: url(../imgs/writer/go-top-light.webp); */
 }
 .light.progress-wrap {
   margin: 0;
@@ -6376,7 +6376,7 @@ section {
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
-  color: var(--var(--white));
+  color: var(--white);
   background: var(--black);
   text-transform: capitalize;
   display: flex;
@@ -7010,7 +7010,7 @@ section {
   text-decoration: none;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  background-image: linear-gradient(90deg, #fff, #ddd 50%, #666 0);
+  /* background-image: linear-gradient(90deg, #fff, #ddd 50%, #666 0); */
   background-size: 200% 100%;
   background-position: 100%;
   transform: perspective(359px) rotateY(-18deg);

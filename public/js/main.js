@@ -30,14 +30,7 @@
       e(".video-popup").magnificPopup({ type: "iframe" }),
     o > 767 &&
       document.querySelector("#has_smooth")?.classList.contains("has-smooth") &&
-      ScrollSmoother.create({
-        smooth: 0.5,
-        effects: !(o < 1025),
-        smoothTouch: 0.5,
-        normalizeScroll: !0,
-        ignoreMobileResize: !0,
-      }),
-    "counterUp" in window)
+      "counterUp" in window)
   ) {
     let a = window.counterUp.default,
       i = (e) => {
@@ -145,7 +138,7 @@
         t.target;
         gsap
           .timeline({ defaults: { x: t.clientX, y: t.clientY } })
-          .to(".cursor1", { ease: "power2.out" })
+          .to(".cursor1", { ease: "power2.out",marker:true })
           .to(".cursor2", { ease: "power2.out" }, "-=0.4");
       } catch (o) {
         console.log(o);
@@ -153,7 +146,7 @@
     });
   document.querySelectorAll(".img_anim_reveal").forEach((e) => {
     let t = e.querySelector("img"),
-      o = gsap.timeline({ scrollTrigger: { trigger: e, start: "top 50%" } });
+      o = gsap.timeline({ scrollTrigger: { trigger: e, start: "top 50%",markers:true } });
     o.set(e, { autoAlpha: 1 }),
       o.from(e, 1.5, { xPercent: -100, ease: Power2.out }),
       o.from(t, 1.5, {

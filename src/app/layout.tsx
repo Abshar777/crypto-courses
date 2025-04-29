@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/all.min.css";
+import "./assets/css/swiper-bundle.min.css";
+import "./assets/css/progressbar.css";
+import "./assets/css/meanmenu.min.css";
+import "./assets/css/magnific-popup.css";
+import "./assets/css/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,8 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html suppressHydrationWarning lang="en">
+      <body
+        suppressHydrationWarning
+        className={`font-heading-dmsans-medium dark`}
+      >
         {children}
         <script src="/js/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
@@ -33,12 +42,12 @@ export default function RootLayout({
         <script src="/js/counter.js"></script>
         <script src="/js/progressbar.js"></script>
         <script src="/js/gsap.min.js"></script>
-        <script src="/js/scrollSmoother.js"></script>
+        {/* <script src="/js/scrollSmoother.js"></script> */}
         <script src="/js/scrollToPlugin.min.js"></script>
         <script src="/js/sccrollTrigger.js"></script>
         <script src="/js/SplitText.min.js"></script>
         <script src="/js/jquery.meanmenu.min.js"></script>
-        <script src="/js/backToTop.js"></script>
+        {/* <script src="/js/backToTop.js"></script> */}
         <script src="/js/main.js"></script>
         <script src="/js/errorHandling.js"></script>
         <script src="/js/offCanvas.js"></script>
