@@ -95,6 +95,9 @@ const Header = () => {
           </div>
           <div className="header__button">
             <a
+              style={{
+                backgroundColor: "#4f33f83b",
+              }}
               href="https://crowdytheme.com/html/arolax/contact.html"
               className="wc-btn wc-btn-primary btn-text-flip"
             >

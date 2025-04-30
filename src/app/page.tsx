@@ -11,7 +11,7 @@ import Feature from "@/components/page-sections/home/feature";
 import Hero from "@/components/page-sections/home/hero";
 import ServiceArea from "@/components/page-sections/home/service";
 import TeamArea from "@/components/page-sections/home/teamArea";
-import WorksSection from "@/components/page-sections/home/works";
+import WorksSection from "@/components/page-sections/home/course";
 import RootLayout from "./layout";
 import Rootprovider from "@/components/ui/lenis";
 

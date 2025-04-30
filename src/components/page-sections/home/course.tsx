@@ -75,14 +75,14 @@ const WorksSection: React.FC = () => {
                 {
                   title: "Haliya Mono",
                   tag: "Design - 2024",
-                  img: "/img/course.jpg",
+                  img: "/c5.png",
                   delay: "0.15",
                   direction: "left",
                 },
                 {
                   title: "Atlas Chatart",
                   tag: "Branding - 2023",
-                  img: "/img/course.jpg",
+                  img: "/c5.png",
                   delay: "0.30",
                   direction: "right",
                 },
