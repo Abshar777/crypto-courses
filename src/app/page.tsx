@@ -33,11 +33,11 @@ export default function Home() {
               <Hero />
               {/* <Feature /> */}
               <WorksSection />
-              {/* <ServiceArea /> */}
+              <ServiceArea />
 
               {/* <Testimonials /> */}
               {/* <TeamArea /> */}
-              <Achivement />
+              {/* <Achivement /> */}
               <Blog />
               <Cta />
             </main>

@@ -3,6 +3,7 @@ import React from "react";
 const WorksSection: React.FC = () => {
   return (
     <section
+     
       style={{
         position: "relative",
       }}
@@ -11,8 +12,8 @@ const WorksSection: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          top:"0",
-          left:"100",
+          top: "0",
+          left: "100",
           width: "50%",
           height: "50%",
           backgroundColor: "#7963ff",
@@ -26,8 +27,8 @@ const WorksSection: React.FC = () => {
       <div
         style={{
           position: "absolute",
-          top:"600",
-          right:"0",
+          top: "600",
+          right: "0",
           width: "50%",
           height: "50%",
           backgroundColor: "#7963ff",
@@ -48,10 +49,10 @@ const WorksSection: React.FC = () => {
           </div>
 
           <div className="shape-2">
-            <img
+            {/* <img
               src="https://crowdytheme.com/html/arolax/assets/imgs/shape/img-s-8.webp"
               alt="shape image"
-            />
+            /> */}
           </div>
 
           <div className="section-header">
@@ -69,20 +70,24 @@ const WorksSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="works-wrapper-box">
+          <div id="courses-uuid"  className="works-wrapper-box">
             <div className="works-wrapper">
               {[
                 {
                   title: "crypto mania",
                   tag: "$100",
-                  img: "/c5.png",
+                  offer: "30% off",
+                  finalPrice: "$70",
+                  img: "/c3.png",
                   delay: "0.15",
                   direction: "left",
                 },
                 {
                   title: "Mastery crypto",
                   tag: "$100",
-                  img: "/c5.png",
+                  offer: "30% off",
+                  finalPrice: "$70",
+                  img: "/c3.png",
                   delay: "0.30",
                   direction: "right",
                 },
@@ -129,11 +134,73 @@ const WorksSection: React.FC = () => {
                           alt="work image"
                         />
                       </div>
-                      <div className="content">
-                        <h2 className="title">{item.title}</h2>
-                      </div>
-                      <div className="meta">
-                        <p className="tag">{item.tag}</p>
+                      <div
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          width: "100%",
+                        }}
+                        className=""
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "10px",
+                          }}
+                          className=""
+                        >
+                          <div className="content">
+                            <h2 className="title">{item.title}</h2>
+                          </div>
+                          <div
+                            style={{
+                              display: "flex",
+                              gap: "10px",
+                              alignItems: "center",
+                            }}
+                            className="meta"
+                          >
+                            <p
+                              style={{ textDecoration: "line-through" }}
+                              className="tag"
+                            >
+                              {item.tag}
+                            </p>
+                            <p
+                              style={{
+                                color: "white",
+                                backgroundColor: "#4f33f83b",
+                                padding: "1px 10px",
+                                borderRadius: "20px",
+                              }}
+                              className="tag"
+                            >
+                              {item.offer}
+                            </p>
+                            <p style={{ color: "white" }} className="tag">
+                              {item.finalPrice}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="">
+                          <div
+                            style={{ scale: 0.8 }}
+                            className="header__button"
+                          >
+                            <a
+                              style={{
+                                backgroundColor: "#4f33f83b",
+                                color: "white !important",
+                              }}
+                              href="https://crowdytheme.com/html/arolax/contact.html"
+                              className="wc-btn wc-btn-primary btn-text-flip"
+                            >
+                              <span data-text="Get started">read More</span>
+                            </a>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </a>
@@ -142,7 +209,7 @@ const WorksSection: React.FC = () => {
             </div>
           </div>
 
-          <div className="btn-wrapper has_fade_anim">
+          <div  id="#courses" className="btn-wrapper has_fade_anim">
             <a
               href="https://crowdytheme.com/html/arolax/works.html"
               className="wc-btn wc-btn-primary btn-text-flip bordered"

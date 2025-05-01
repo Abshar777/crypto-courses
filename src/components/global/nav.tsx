@@ -1,5 +1,6 @@
 "use client";
 import { useIsMobile } from "@/hooks/use-mobile";
+import Link from "next/link";
 import { useEffect } from "react";
 
 import { useState } from "react";
@@ -26,18 +27,18 @@ const Header = () => {
     },
     {
       id: 2,
-      name: "About",
-      link: "/about",
+      name: "Courses",
+      link: "courses-uuid",
     },
     {
       id: 3,
-      name: "Courses",
-      link: "/courses",
+      name: "Awards",
+      link: "awards-uuid",
     },
     {
       id: 4,
-      name: "Contact",
-      link: "/contact",
+      name: "Blog",
+      link: "blog-uuid",
     },
   ];
 
@@ -82,9 +83,19 @@ const Header = () => {
                 {!isMobile &&
                   navItems.map((item) => (
                     <li className="menu-item" key={item.id}>
+                      {/* when clicking on it might be redrct that component smooth scroll */}
                       <a
-                        style={{ fontFamily: "monospace", fontSize: "18px" }}
-                        href={item.link}
+                        style={{ fontFamily: "monospace", fontSize: "18px" ,cursor:"pointer"}}
+                        // href={item.link}
+                        onClick={() => {
+                          const elem =document.getElementById(item.link);
+                          console.log(elem,item.link,elem?.offsetTop);
+                          window.scrollTo({
+                            
+                            top: elem?.offsetTop,
+                            behavior: "smooth",
+                          });
+                        }}
                       >
                         {item.name}
                       </a>

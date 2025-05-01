@@ -1,6 +1,6 @@
 const Blog = () => {
   return (
-    <section className="blog-area">
+    <section id="blog-uuid" className="blog-area">
       <div className="container">
         <div className="blog-area-inner">
           <div className="section-header">

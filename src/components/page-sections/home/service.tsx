@@ -3,25 +3,27 @@ import React from "react";
 const ServiceArea: React.FC = () => {
   const assets = [
     {
-      title: "Forex",
-      description: "Forex is a global market for trading currencies.",
-      image: "/img/forex.webp",
+      title: "GUINNESS RECORD HOLDER",
+      description:
+        "Most Nationalities in a Trading Lesson",
+      image: "/img/guinnessRecord2.png",
     },
     {
       title: "Blockchain",
       description: "Blockchain is a global market for trading currencies.",
-      image: "/img/blockchain.webp",
+      image: "/img/cropped-Eifa-Awards-logo.png",
     },
     {
-      title: "Stocks",
-      description: "Stocks is a global market for trading currencies.",
-      image: "/img/stocks.webp",
+      title: "PROFX AWARDS DUBAI 2024",
+      description: "Best Forex Academy Of The Year 2024",
+      image: "/img/forexTraders.png",
     },
     {
-      title: "Mutual Funds",
-      description: "Mutual Funds is a global market for trading currencies.",
-      image: "/img/mutual-fund.webp",
+      title: "MONEY CONCLAVE 2024",
+      description: "Best Crypto & Blockchain Educator Of The Year",
+      image: "/img/mc-logo-4.png",
     },
+
   ];
   return (
     <section className="service-area">
@@ -64,19 +66,17 @@ const ServiceArea: React.FC = () => {
                   }}
                   className="section-title has_text_move_anim"
                 >
-                  ASSETS
+                  AWARDS
                 </h2>
               </div>
             </div>
             <div className="text-wrapper">
-              <p className="text has_fade_anim">
-                We provide specific and dedicated education on trading related
-                subjects and our flexible learning solutions connect our
-                students globally.
-              </p>
+              {/* <p className="text has_fade_anim">
+              We are proud to have received numerous awards and recognitions for our excellence in education and training. These accolades are a testament to our commitment to providing the highest quality services to our clients.
+              </p> */}
             </div>
           </div>
-          <div className="services-wrapper-box">
+          <div id="awards-uuid" className="services-wrapper-box">
             <div className="services-wrapper">
               {assets.map((asset, index) => (
                 <div
@@ -95,13 +95,13 @@ const ServiceArea: React.FC = () => {
                     >
                       <img
                         style={{
-                          scale: "1.5",
+                          scale: index === 0 ? "1.5" : "1",
                         }}
                         src={asset.image}
                         alt="service image"
                       />
                     </div>
-                    <div className="content">
+                    <div id="awards" className="content">
                       <h2 className="title">{asset.title}</h2>
                       <p className="text">{asset.description}</p>
                       <div className="btn-wrapper">

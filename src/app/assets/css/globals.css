@@ -16,6 +16,12 @@
   --white-2: #999999;
   --action: #ffcd4d;
 }
+
+/* enable smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
 :root .dark {
   --primary: #ffffff;
   --secondary: #999999;
@@ -7390,7 +7396,8 @@ section {
   color: var(--white);
 }
 .dark .wc-btn-primary:hover {
-  color: var(--black);
+  color: white;
+
 }
 @media (min-width: 1600px) {
   .container.large {
