@@ -31,14 +31,14 @@ export default function Home() {
             <main>
           
               <Hero />
-              <Feature />
+              {/* <Feature /> */}
               <WorksSection />
               {/* <ServiceArea /> */}
 
               {/* <Testimonials /> */}
-              <TeamArea />
-              <Blog />
+              {/* <TeamArea /> */}
               <Achivement />
+              <Blog />
               <Cta />
             </main>
             <Footer />
