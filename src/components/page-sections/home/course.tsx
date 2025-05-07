@@ -8,7 +8,6 @@ const WorksSection: React.FC = () => {
       }}
       className="works-area"
     >
-
       <div className="container">
         <div className="works-area-inner section-spacing-bottom">
           <div className="shape-1">
@@ -157,14 +156,29 @@ const WorksSection: React.FC = () => {
                         <div className="">
                           <div
                             style={{ scale: 0.8 }}
-                            className="header__button"
+                            className="header__button show-light"
+                          >
+                            <a
+                              style={{
+                                backgroundColor: "#4f33f8bf",
+                                color: "white !important",
+                              }}
+                              href="/pdf/1.pdf"
+                              className="wc-btn wc-btn-primary btn-text-flip"
+                            >
+                              <span data-text="Get started">read More</span>
+                            </a>
+                          </div>
+                          <div
+                            style={{ scale: 0.8 }}
+                            className="header__button show-dark"
                           >
                             <a
                               style={{
                                 backgroundColor: "#4f33f83b",
                                 color: "white !important",
                               }}
-                              href="https://crowdytheme.com/html/arolax/contact.html"
+                              href="/pdf/2.pdf"
                               className="wc-btn wc-btn-primary btn-text-flip"
                             >
                               <span data-text="Get started">read More</span>

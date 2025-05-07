@@ -26,7 +26,8 @@ const ServiceArea: React.FC = () => {
 
   ];
   return (
-    <section className="service-area">
+   <div style={{width:"100%",padding:"0 2px"}} className="">
+     <section style={{borderRadius:"20px"}}  className="service-area">
       <div className="container">
         <div className="service-area-inner section-spacing-bottom">
           <div className="shape-1">
@@ -119,6 +120,7 @@ const ServiceArea: React.FC = () => {
         </div>
       </div>
     </section>
+   </div>
   );
 };
 

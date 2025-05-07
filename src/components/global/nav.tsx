@@ -76,6 +76,17 @@ const Header = () => {
               src="/img/logo.png"
               alt="Site Logo"
             />
+            <img
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                filter: "hue-rotate(45deg)",
+              }}
+              className="show-light"
+              src="/img/logo.png"
+              alt="Site Logo"
+            />
           </div>
           <div className="header__nav">
             <nav suppressHydrationWarning className="main-menu">
@@ -104,7 +115,18 @@ const Header = () => {
               </ul>
             </nav>
           </div>
-          <div className="header__button">
+          <div className="header__button show-light">
+            <a
+              style={{
+                backgroundColor: "#4f33f8bf",
+              }}
+              href="https://crowdytheme.com/html/arolax/contact.html"
+              className="wc-btn wc-btn-primary btn-text-flip"
+            >
+              <span data-text="Get started">Get started</span>
+            </a>
+          </div>
+          <div className="header__button show-dark">
             <a
               style={{
                 backgroundColor: "#4f33f83b",
@@ -115,6 +137,16 @@ const Header = () => {
               <span data-text="Get started">Get started</span>
             </a>
           </div>
+          <button className="show-light" style={{cursor:"pointer"}} onClick={()=>{
+            document.body.classList.toggle("dark");
+          }}>
+            <i  className="fa-solid fa-moon"></i>
+          </button>
+          <button className="show-dark" style={{cursor:"pointer"}} onClick={()=>{
+            document.body.classList.toggle("dark");
+          }}>
+            <i style={{color:"white"}} className="fa-solid fa-sun"></i>
+          </button>
           <div
             style={{
               display: "none",
@@ -124,6 +156,7 @@ const Header = () => {
             <button className="open-offcanvas">
               <i className="fa-solid fa-bars"></i>
             </button>
+
           </div>
         </div>
       </div>

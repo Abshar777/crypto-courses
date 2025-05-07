@@ -32,7 +32,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <body
         suppressHydrationWarning
-        className={`font-heading-dmsans-medium dark`}
+        className={`font-heading-dmsans-medium `}
       >
         {children}
         <script src="/js/jquery.min.js"></script>
