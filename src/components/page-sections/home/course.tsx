@@ -8,36 +8,7 @@ const WorksSection: React.FC = () => {
       }}
       className="works-area"
     >
-      <div
-        style={{
-          position: "absolute",
-          top: "0",
-          left: "100",
-          width: "50%",
-          height: "50%",
-          backgroundColor: "#7963ff",
-          filter: "blur(100px)",
-          opacity: "0.1",
-          // zIndex:"-1",
-          borderRadius: "50%",
-          // transform:"translate(-50%,-50%)",
-        }}
-      ></div>
-      <div
-        style={{
-          position: "absolute",
-          top: "600",
-          right: "0",
-          width: "50%",
-          height: "50%",
-          backgroundColor: "#7963ff",
-          filter: "blur(100px)",
-          opacity: "0.1",
-          // zIndex:"-1",
-          borderRadius: "50%",
-          // transform:"translate(-50%,-50%)",
-        }}
-      ></div>
+
       <div className="container">
         <div className="works-area-inner section-spacing-bottom">
           <div className="shape-1">
@@ -169,8 +140,8 @@ const WorksSection: React.FC = () => {
                             </p>
                             <p
                               style={{
-                                color: "white",
-                                backgroundColor: "#4f33f83b",
+                                color: "black",
+                                backgroundColor: "white",
                                 padding: "1px 10px",
                                 borderRadius: "20px",
                               }}
