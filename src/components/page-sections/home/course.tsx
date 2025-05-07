@@ -3,7 +3,6 @@ import React from "react";
 const WorksSection: React.FC = () => {
   return (
     <section
-     
       style={{
         position: "relative",
       }}
@@ -70,24 +69,24 @@ const WorksSection: React.FC = () => {
             </div>
           </div>
 
-          <div id="courses-uuid"  className="works-wrapper-box">
+          <div id="courses-uuid" className="works-wrapper-box">
             <div className="works-wrapper">
               {[
                 {
                   title: "crypto mania",
-                  tag: "$100",
-                  offer: "30% off",
-                  finalPrice: "$70",
-                  img: "/c3.png",
+                  tag: "4000AED ",
+                  offer: "25% off",
+                  finalPrice: "3000AED ",
+                  img: "/img/c1.png",
                   delay: "0.15",
                   direction: "left",
                 },
                 {
                   title: "Mastery crypto",
-                  tag: "$100",
-                  offer: "30% off",
-                  finalPrice: "$70",
-                  img: "/c3.png",
+                  tag: "10000AED ",
+                  offer: "20% off",
+                  finalPrice: "8000AED ",
+                  img: "/img/c2.png",
                   delay: "0.30",
                   direction: "right",
                 },
@@ -209,7 +208,7 @@ const WorksSection: React.FC = () => {
             </div>
           </div>
 
-          <div  id="#courses" className="btn-wrapper has_fade_anim">
+          <div id="#courses" className="btn-wrapper has_fade_anim">
             <a
               href="https://crowdytheme.com/html/arolax/works.html"
               className="wc-btn wc-btn-primary btn-text-flip bordered"
