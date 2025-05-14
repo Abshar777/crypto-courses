@@ -26,6 +26,7 @@ import ParticleNetwork from "@/components/particle-network";
 import { useMobile } from "@/hooks/use-mobile";
 import Image from "next/image";
 import { FlipWords } from "@/components/flip-words";
+import Hero from "@/components/page-sections/hero";
 
 export default function Home() {
   const isMobile = useMobile();
@@ -84,162 +85,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section
-        ref={heroRef}
-        className="relative z-10 pt-32 pb-20 min-h-screen flex items-center"
-      >
-        <div className="absolute inset-0 overflow-hidden">
-          <CryptoCanvas />
-        </div>
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#030014]"
-          style={{ opacity: Math.min(scrollY / 500, 1) }}
-        ></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="lg:w-1/2 space-y-6"
-            >
-              <Badge className="bg-white/5 text-cyan-400 hover:bg-white/10 transition-colors px-3 py-1 backdrop-blur-sm border border-white/10">
-                <span className="animate-pulse mr-2">•</span> Crypto Education
-              </Badge>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                Master the{" "}
-                <span className="relative">
-                  <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-purple-400 to-cyan-400 animate-gradient">
-                    Crypto
-                  </span>
-                  {/* <span className="absolute -inset-1 bg-gradient-to-r from-fuchsia-400 via-purple-400 to-cyan-400 opacity-30 blur-md"></span> */}
-                </span>{" "}
-                <FlipWords className="text-white" words={['Revolution','Uprising ',"Transformation" ]} />
-              </h1>
-              <p className="text-lg text-white/70 max-w-xl">
-                Unlock the secrets of cryptocurrency, trading strategies, and
-                blockchain fundamentals with our award-winning courses designed
-                for beginners and intermediate learners.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button className="relative overflow-hidden group h-14 px-8">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-fuchsia-600 to-cyan-400"></span>
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
-                  <span className="relative z-10 text-lg">Start Learning</span>
-                </Button>
-               
-              </div>
-              {/* <div className="flex items-center gap-4 pt-6">
-                <div className="flex -space-x-3">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full border-2 border-[#030014] relative overflow-hidden"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600 to-cyan-400"></div>
-                      <div className="absolute inset-0.5 rounded-full overflow-hidden bg-[#030014]">
-                        <img
-                          src={`/placeholder.svg?key=mqydq&key=g8za3&key=vkids&height=100&width=100&query=crypto%20user%20avatar%20${i}`}
-                          alt="User"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="text-sm text-white/70">
-                  <span className="text-white font-bold">10,000+</span> students
-                  enrolled
-                </div>
-              </div> */}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="lg:w-1/2 relative"
-              style={{
-                transform: isMobile
-                  ? "none"
-                  : `translateY(${-parallaxValue * 0.2}px)`,
-              }}
-            >
-              <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-fuchsia-600 to-cyan-400 rounded-2xl blur-md opacity-70 animate-pulse-slow"></div>
-                <div className="relative bg-[#0D0D25]/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 p-6">
-                  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fuchsia-600 to-cyan-400"></div>
-                  <div className="flex justify-between items-center mb-6">
-                    <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div className="text-xs text-white/50">
-                      crypto-basics.md
-                    </div>
-                  </div>
-                  <pre className="text-xs md:text-sm overflow-x-auto text-white/90 font-mono">
-                    <code>
-                      {`# Cryptocurrency Fundamentals
-
-## What is Cryptocurrency?
-A digital or virtual currency that uses 
-cryptography for security and operates on 
-a technology called blockchain.
-
-## Key Concepts:
-- Decentralization
-- Blockchain Technology
-- Public & Private Keys
-- Mining & Consensus Mechanisms
-- Wallets & Security
-
-## Popular Cryptocurrencies:
-- Bitcoin (BTC): Digital gold, store of value
-- Ethereum (ETH): Smart contract platform
-- Solana (SOL): High-performance blockchain
-- Cardano (ADA): Research-driven approach`}
-                    </code>
-                  </pre>
-                </div>
-
-                {/* Floating elements */}
-                <div className="absolute -top-6 -right-6 bg-[#0D0D25]/90 backdrop-blur-xl rounded-xl p-4 border border-white/10 shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
-                      <Zap className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-white/70">BTC Price</div>
-                      <div className="text-lg font-bold">$62,842.21</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute -bottom-6 -left-6 bg-[#0D0D25]/90 backdrop-blur-xl rounded-xl p-4 border border-white/10 shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-r from-fuchsia-500 to-cyan-500 flex items-center justify-center">
-                      <Globe className="w-5 h-5 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-xs text-white/70">Market Cap</div>
-                      <div className="text-lg font-bold">$2.3T</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        {/* <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-2">
-          <div className="text-white/50 text-sm">Scroll to explore</div>
-          <div className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center p-1">
-            <div className="w-1.5 h-1.5 rounded-full bg-white animate-bounce"></div>
-          </div>
-        </div> */}
-      </section>
+      <Hero scrollY={scrollY} />
 
       {/* Features Section */}
       <section className="relative z-10 py-20">
@@ -478,7 +324,7 @@ a technology called blockchain.
                 finalPrice: "3000AED",
                 price: "4000AED",
                 image: "/c1.png",
-                pdf:'/pdf/1.pdf',
+                pdf: "/pdf/1.pdf",
                 color: "from-fuchsia-600 to-purple-600",
                 description:
                   "Perfect for newcomers to the crypto world. Learn the fundamentals of blockchain, how cryptocurrencies work, basic trading concepts, and wallet security.",
@@ -496,9 +342,8 @@ a technology called blockchain.
                 offer: "20% off",
                 finalPrice: "8000AED",
                 price: "10000AED",
-                pdf:'/pdf/2.pdf',
-                image:
-                  "/c2.png",
+                pdf: "/pdf/2.pdf",
+                image: "/c2.png",
                 color: "from-purple-600 to-cyan-600",
                 description:
                   "Take your crypto knowledge to the next level with advanced trading strategies, technical analysis, portfolio management, and risk assessment techniques.",
@@ -562,17 +407,25 @@ a technology called blockchain.
                         <BookOpen className="w-4 h-4" />
                         <span>{course.lessons} Lessons</span>
                       </div>
-                     
                     </div>
                     <div className="mt-auto pt-4 border-t border-white/10 flex justify-between items-center">
                       <div className="flex items-center gap-2">
-                        <div className="font-bold text-white text-xl">{course.finalPrice}</div>
-                        <div className="line-through text-white/50 text-sm">{course.price}</div>
-                        <div className="text-white/50 text-sm">{course.offer}</div>
+                        <div className="font-bold text-white text-xl">
+                          {course.finalPrice}
+                        </div>
+                        <div className="line-through text-white/50 text-sm">
+                          {course.price}
+                        </div>
+                        <div className="text-white/50 text-sm">
+                          {course.offer}
+                        </div>
                       </div>
-                      <Button onClick={() => {
-                        window.open(course.pdf)
-                      }} className="relative overflow-hidden group">
+                      <Button
+                        onClick={() => {
+                          window.open(course.pdf);
+                        }}
+                        className="relative overflow-hidden group"
+                      >
                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-fuchsia-600 to-cyan-400"></span>
                         <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
                         <span className="relative z-10">Enroll Now</span>
@@ -658,7 +511,7 @@ a technology called blockchain.
                         ></div>
                         <div className="w-14 h-14 rounded-full overflow-hidden border border-white/10 relative">
                           <img
-                            src={`/abstract-geometric-shapes.png?height=100&width=100&query=${testimonial.image}`}
+                            src={`/avatar.webp`}
                             alt={testimonial.name}
                             className="w-full h-full object-cover"
                           />
@@ -701,20 +554,20 @@ a technology called blockchain.
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             <div>
-            <div className="flex items-center gap-2">
-            <div className="w-12 h-12 rounded-xl flex items-center justify-center relative overflow-hidden group">
-              <Image
-                style={{ filter: "hue-rotate(75deg)" }}
-                src="/logo.png"
-                alt="Logo"
-                width={100}
-                height={100}
-              />
-            </div>
-            <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
-              Web3<span className="text-fuchsia-500">DeCoder</span>
-            </span>
-          </div>
+              <div className="flex items-center gap-2">
+                <div className="w-12 h-12 rounded-xl flex items-center justify-center relative overflow-hidden group">
+                  <Image
+                    style={{ filter: "hue-rotate(75deg)" }}
+                    src="/logo.png"
+                    alt="Logo"
+                    width={100}
+                    height={100}
+                  />
+                </div>
+                <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
+                  Web3<span className="text-fuchsia-500">DeCoder</span>
+                </span>
+              </div>
               <p className="text-white/70 mb-4">
                 The leading platform for blockchain and cryptocurrency
                 education, empowering the next generation of Web3 builders.
