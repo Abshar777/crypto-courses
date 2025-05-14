@@ -7,23 +7,15 @@ const Hero = () => {
   const isMobile = useIsMobile()
   return (
     <div className="hero-container">
-      <p style={{fontSize:isMobile ? ".8rem" : "1rem",textAlign:"center"}} className="hero-tagline">
+      <p style={{fontSize:isMobile ? ".8rem" : "1rem",textAlign:"center",color:"white"}} className="hero-tagline">
         Master <span className="highlight">Crypto</span> Navigate the Future of Finance.
       </p>
       
-      <h1 style={{fontFamily:"monospace",width:isMobile ? "100%" : "50%"}} className="hero-title">
+      <h1 style={{fontFamily:"monospace",width:isMobile ? "100%" : "50%",color:"white"}} className="hero-title">
       Unlock Crypto Empower Your Financial Future
       </h1>
       <div className="hero-background">
-        <div className="hero-image-wrapper">
-          <img src="/hero2.jpeg" alt="" className="hero-image" />
-        </div>
-        <div style={{display:isMobile ? "none" : "block"}} className="hero-image-wrapper2">
-          <img src="/hero2.jpeg" alt="" className="hero-image" />
-        </div>
-        <div style={{display:isMobile ? "none" : "block"}} className="hero-image-wrapper3">
-          <img src="/hero2.jpeg" alt="" className="hero-image" />
-        </div>
+        <img className="hero-image" src="/img/bg.jpeg" alt="" />
       </div>
     </div>
   );
