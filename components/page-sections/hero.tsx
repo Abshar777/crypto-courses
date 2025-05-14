@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Zap, Globe } from 'lucide-react';
@@ -19,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ scrollY }) => {
   });
   
   const parallaxValue = useTransform(scrollYProgress, [0, 1], [0, 500]);
-  const isMobile = window.innerWidth < 768;
+  const isMobile = typeof window !== 'undefined' && window?.innerWidth < 768 ;
 
   return (
     <section

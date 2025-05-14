@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
@@ -31,9 +32,11 @@ const CryptoCanvas: React.FC = () => {
     if (!ctx) return;
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
+      if(typeof window !== 'undefined'){
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        initParticles();
+      }
     };
 
     const handleMouseMove = (e: MouseEvent) => {
