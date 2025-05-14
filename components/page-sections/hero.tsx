@@ -71,16 +71,16 @@ const Hero: React.FC<HeroProps> = ({ scrollY }) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:w-1/2 relative"
+            className="lg:w-1/2 relative w-full"
             style={{
               transform: isMobile
                 ? "none"
                 : `translateY(${-parallaxValue.get() * 0.2}px)`,
             }}
           >
-            <div className="relative">
+            <div className="relative w-full ">
               <div className="absolute -inset-1 bg-gradient-to-r from-fuchsia-600 to-cyan-400 rounded-2xl blur-md opacity-70 animate-pulse-slow"></div>
-              <div className="relative min-h-[530px]  bg-[#0D0D25]/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 p-6">
+              <div className="relative min-h-[530px] w-full  bg-[#0D0D25]/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 p-6">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fuchsia-600 to-cyan-400"></div>
                 <div className="flex justify-between items-center mb-6">
                   <div className="flex items-center gap-2">
