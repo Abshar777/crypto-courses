@@ -325,6 +325,7 @@ export default function Home() {
                 price: "4000AED",
                 image: "/c1.png",
                 pdf: "/pdf/1.pdf",
+                duration: "20 hours",
                 color: "from-fuchsia-600 to-purple-600",
                 description:
                   "Perfect for newcomers to the crypto world. Learn the fundamentals of blockchain, how cryptocurrencies work, basic trading concepts, and wallet security.",
@@ -344,6 +345,7 @@ export default function Home() {
                 price: "10000AED",
                 pdf: "/pdf/2.pdf",
                 image: "/c2.png",
+                duration: "50 hours",
                 color: "from-purple-600 to-cyan-600",
                 description:
                   "Take your crypto knowledge to the next level with advanced trading strategies, technical analysis, portfolio management, and risk assessment techniques.",
@@ -406,6 +408,10 @@ export default function Home() {
                       <div className="flex items-center gap-1">
                         <BookOpen className="w-4 h-4" />
                         <span>{course.lessons} Lessons</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        <span>{course.duration}</span>
                       </div>
                     </div>
                     <div className="mt-auto pt-4 border-t border-white/10 flex justify-between items-center">

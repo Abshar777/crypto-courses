@@ -1,26 +1,42 @@
-"use client"
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Zap, Globe } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { FlipWords } from '@/components/flip-words';
-import CryptoCanvas from '@/components/crypto-canvas';
-import TypewriterCode from '@/components/typeWriter';
+"use client";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Zap, Globe, Loader } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { FlipWords } from "@/components/flip-words";
+import CryptoCanvas from "@/components/crypto-canvas";
+import TypewriterCode from "@/components/typeWriter";
+import { useBtc } from "@/hooks/useBtc";
+import { marketCap } from "@/api/btcPrice";
 
 interface HeroProps {
   scrollY: number;
 }
 
 const Hero: React.FC<HeroProps> = ({ scrollY }) => {
+  const { btcPrice, isPending } = useBtc();
+  const [marketcap, setMarketCap] = useState<number>(0);
+  const [marketcapPending, setMarketCapPending] = useState<boolean>(false);
+
+
+  useEffect(() => {
+    (async () => {
+      setMarketCapPending(true);
+      const marketcap = await marketCap();
+      setMarketCap(marketcap);
+      setMarketCapPending(false);
+    })();
+  }, []);
+
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
-    offset: ["start start", "end start"]
+    offset: ["start start", "end start"],
   });
-  
+
   const parallaxValue = useTransform(scrollYProgress, [0, 1], [0, 500]);
-  const isMobile = typeof window !== 'undefined' && window?.innerWidth < 768 ;
+  const isMobile = typeof window !== "undefined" && window?.innerWidth < 768;
 
   return (
     <section
@@ -52,7 +68,10 @@ const Hero: React.FC<HeroProps> = ({ scrollY }) => {
                   Crypto
                 </span>
               </span>{" "}
-              <FlipWords className="text-white" words={['Revolution', 'Uprising', 'Transformation']} />
+              <FlipWords
+                className="text-white"
+                words={["Revolution", "Uprising", "Transformation"]}
+              />
             </h1>
             <p className="text-lg text-white/70 max-w-xl">
               Unlock the secrets of cryptocurrency, trading strategies, and
@@ -88,9 +107,7 @@ const Hero: React.FC<HeroProps> = ({ scrollY }) => {
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <div className="text-xs text-white/50">
-                    crypto-basics.md
-                  </div>
+                  <div className="text-xs text-white/50">crypto-basics.md</div>
                 </div>
                 <TypewriterCode className="text-xs md:text-sm overflow-x-auto text-white/90 font-mono">
                   {`# Cryptocurrency Fundamentals
@@ -123,7 +140,13 @@ a technology called blockchain.
                   </div>
                   <div>
                     <div className="text-xs text-white/70">BTC Price</div>
-                    <div className="text-lg font-bold">$62,842.21</div>
+                    <div className="text-lg font-bold">
+                      {isPending ? (
+                        <Loader className="animate-spin" />
+                      ) : (
+                        "$" + btcPrice
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -135,7 +158,13 @@ a technology called blockchain.
                   </div>
                   <div>
                     <div className="text-xs text-white/70">Market Cap</div>
-                    <div className="text-lg font-bold">$2.3T</div>
+                    <div className="text-lg font-bold">
+                      {marketcapPending ? (
+                        <Loader className="animate-spin" />
+                      ) : (
+                        "$" + marketcap
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
