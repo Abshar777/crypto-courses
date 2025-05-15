@@ -9,6 +9,7 @@ import CryptoCanvas from "@/components/crypto-canvas";
 import TypewriterCode from "@/components/typeWriter";
 import { useBtc } from "@/hooks/useBtc";
 import { marketCap } from "@/api/btcPrice";
+import { formatMarketCap } from "@/lib/formate";
 
 interface HeroProps {
   scrollY: number;
@@ -16,7 +17,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ scrollY }) => {
   const { btcPrice, isPending } = useBtc();
-  const [marketcap, setMarketCap] = useState<number>(0);
+  const [marketcap, setMarketCap] = useState<string>("0");
   const [marketcapPending, setMarketCapPending] = useState<boolean>(false);
 
 
@@ -24,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({ scrollY }) => {
     (async () => {
       setMarketCapPending(true);
       const marketcap = await marketCap();
-      setMarketCap(marketcap);
+      setMarketCap(formatMarketCap(marketcap as number));
       setMarketCapPending(false);
     })();
   }, []);
@@ -162,7 +163,7 @@ a technology called blockchain.
                       {marketcapPending ? (
                         <Loader className="animate-spin" />
                       ) : (
-                         marketcap+'T'
+                         setMarketCap
                       )}
                     </div>
                   </div>
