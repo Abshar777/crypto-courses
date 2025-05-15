@@ -162,7 +162,7 @@ a technology called blockchain.
                       {marketcapPending ? (
                         <Loader className="animate-spin" />
                       ) : (
-                        "$" + marketcap
+                         marketcap+'T'
                       )}
                     </div>
                   </div>
