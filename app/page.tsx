@@ -34,6 +34,7 @@ import Header from "@/components/global/header";
 import Testimonilas from "@/components/page-sections/testimonilas";
 import Footer from "@/components/global/footer";
 import Cta from "@/components/page-sections/cta";
+import Contact from "@/components/page-sections/conatct";
 export default function Home() {
   const isMobile = useMobile();
   const [scrollY, setScrollY] = useState(0);
@@ -73,6 +74,7 @@ export default function Home() {
 
       {/* Testimonials */}
       <Testimonilas />
+      <Contact />
       {/* Footer */}
       <Footer />
     </div>

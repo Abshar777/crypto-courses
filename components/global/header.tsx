@@ -18,7 +18,7 @@ const Header = () => {
             />
           </div>
           <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
-            Web3<span className="text-fuchsia-500">DeCoder</span>
+            Web3<span className="text-fuchsia-500">DeCoded</span>
           </span>
         </div>
         <nav className="hidden md:flex items-center gap-8">
@@ -31,7 +31,7 @@ const Header = () => {
               {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-fuchsia-500 to-cyan-400 group-hover:w-full transition-all duration-300"></span>
             </a>
-          ))}
+        ))}
         </nav>
         <Button onClick={() => window.open("https://wa.link/z7re0z", "_blank")} className="text-white/70 bg-gradient-to-r from-fuchsia-500 to-cyan-400 border-none outline-none hover:text-white">
           Contact Us

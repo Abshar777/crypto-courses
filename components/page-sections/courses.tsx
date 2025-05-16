@@ -160,6 +160,7 @@ const Courses = () => {
                       </div>
                     </div>
                     <Button
+                      disabled={true}
                       onClick={() => {
                         window.open(course.pdf);
                       }}

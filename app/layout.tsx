@@ -3,10 +3,10 @@ import "./globals.css";
 import ReactQueryProvider from "@/components/providers/react-query";
 
 export const metadata: Metadata = {
-  title: "Web3 DeCoders",
+  title: "Web3 DeCodeds",
   description:
-    "Web3 DeCoders is a platform for learning about blockchain and cryptocurrency.",
-  generator: "Web3 DeCoders",
+    "Web3 DeCodeds is a platform for learning about blockchain and cryptocurrency.",
+  generator: "Web3 DeCodeds",
   icons: {
     icon: "/favicon.ico",
   },

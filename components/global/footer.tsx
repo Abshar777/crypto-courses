@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { IoLogoWhatsapp } from "react-icons/io";
 import Link from 'next/link'
-import { ExternalLink, Github, Mail, Twitter } from 'lucide-react'
+import { ExternalLink, Github, Instagram, Mail, Twitter } from 'lucide-react'
 import { navItems } from '@/constants/nav';
 
 const Footer = () => {
@@ -23,7 +23,7 @@ const Footer = () => {
               />
             </div>
             <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70">
-              Web3<span className="text-fuchsia-500">DeCoder</span>
+              Web3<span className="text-fuchsia-500">DeCoded</span>
             </span>
           </div>
           <p className="text-white/70 mb-4">
@@ -36,8 +36,13 @@ const Footer = () => {
                 href: "https://wa.link/z7re0z"
             },  {
                 icon: <Mail />,
-                href: "mailto:web3Decoders@gmail.com"
-            }].map((social, i) => (
+                href: "mailto:web3DeCodeds@gmail.com"
+            },
+            {
+                icon: <Instagram />,
+                href: "https://www.instagram.com/web3_decoded?igsh=MXdtdzdxemJzM2swbA%3D%3D&utm_source=qr"
+            },
+        ].map((social, i) => (
                 <a
                   key={social.href}
                   href={social.href}
@@ -103,9 +108,12 @@ const Footer = () => {
           </h4>
           <ul className="space-y-2">
             {[
-              "Email: web3Decoders@gmail.com",
-              "Phone: +1234567890",
-              "Address: 1234 Main St, Anytown, USA",
+            //   "Email: web3DeCodeds@gmail.com",
+            //   "Phone: +971526666666",
+              "Address: 1 Gold Souq - Deira - Dubai - United Arab Emirates",
+              "Instagram: web3_decoded",
+            
+              
             ].map((item) => (
               <li key={item}>
                 <Link
@@ -123,7 +131,7 @@ const Footer = () => {
 
       <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="text-white/60 text-sm">
-          © 2025 web3Decoders. All rights reserved.
+          © 2025 web3DeCodeds. All rights reserved.
         </div>
         <div className="flex gap-6">
           <Link
