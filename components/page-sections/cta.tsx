@@ -23,11 +23,12 @@ const Cta = () => {
         ref={ref}
       >
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
-          <div className="flex flex-col justify-between items-start w-full md:w-1/2 gap-8 z-10">
-            <h2 className="text-4xl font-bold text-white">
+          <div className="flex flex-col justify-between items-center w-full md:w-1/2 gap-8 z-10">
+            <h2 className="text-4xl text-center  text-nowrap font-bold text-white">
               Powered by{" "}
+              <br />
               <span className="relative z-10 uppercase text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-purple-400 to-cyan-400 animate-gradient">
-                Delta Trading
+              Delta International Institute
               </span>
             </h2>
             <p className="text-white/80 max-w-md">
@@ -59,29 +60,7 @@ const Cta = () => {
               },
             }}
           >
-            <motion.div
-              className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center"
-             
-              transition={{
-                duration: 8,
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "loop",
-                ease: "linear",
-              }}
-            >
-              <motion.img
-                src="/deltaLogo.jpeg"
-                alt="Delta Trading Logo"
-                className="w-full h-full object-contain"
-                whileHover={{
-                  scale: 1.1,
-                  transition: { duration: 0.2 },
-                }}
-                style={{
-                  filter: "drop-shadow(0 0 10px rgba(219, 39, 119, 0.4))",
-                }}
-              />
-            </motion.div>
+          
           </motion.div>
         </div>
 
