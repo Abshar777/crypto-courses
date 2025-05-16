@@ -36,6 +36,7 @@ const Cta = () => {
               world.
             </p>
             <motion.button
+            onClick={() => window.open("https://whatsapp.com/channel/0029Va555vE4yltNbsBtHT0D", "_blank")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-3 bg-gradient-to-r from-fuchsia-500 to-cyan-500 rounded-lg text-white font-medium"

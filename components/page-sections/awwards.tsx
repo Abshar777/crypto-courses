@@ -87,13 +87,13 @@ const Awwards = () => {
               <p className="text-white/70 text-sm mb-4">
                 {award.description}
               </p>
-              <Button
+              {/* <Button
                 variant="ghost"
                 size="sm"
-                className="text-white/50 hover:text-white mt-auto"
+                className="text-white/50  mt-auto"
               >
                 Learn more <ArrowRight className="w-3 h-3 ml-1" />
-              </Button>
+              </Button> */}
             </Card>
           </motion.div>
         ))}

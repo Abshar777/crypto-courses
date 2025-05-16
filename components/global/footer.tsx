@@ -111,7 +111,7 @@ const Footer = () => {
             //   "Email: web3DeCodeds@gmail.com",
             //   "Phone: +971526666666",
               "Address: 1 Gold Souq - Deira - Dubai - United Arab Emirates",
-              "Instagram: web3_decoded",
+            //   "Instagram: web3_decoded",
             
               
             ].map((item) => (

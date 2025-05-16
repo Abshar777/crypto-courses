@@ -31,12 +31,12 @@ const Courses = () => {
               Popular Learning Paths
             </h2>
           </div>
-          <Button
+          {/* <Button
             variant="ghost"
             className="text-white/70 hover:text-white flex items-center gap-2"
           >
             View All Courses <ArrowRight className="w-4 h-4" />
-          </Button>
+          </Button> */}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
