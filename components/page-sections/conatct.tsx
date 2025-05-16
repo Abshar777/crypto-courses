@@ -195,12 +195,13 @@ export default function Contact() {
                         borderRadius: "0.5rem",
                       }}
                       dropdownStyle={{
-                        backgroundColor: "rgb(31, 41, 55)",
+                        backgroundColor: "rgb(0 0 0 / 0.9)",
+                        backdropFilter: "blur(10px)",
                         color: "white",
                       }}
                       buttonStyle={{
-                        backgroundColor: "rgba(31, 41, 55, 0.5)",
-                        borderColor: "rgb(75, 85, 99)",
+                        backgroundColor: "rgb(0 0 0 / 0.5)",
+                        borderColor: "rgb(76 29 149 / 0.3)",
                         borderRadius: "0.5rem 0 0 0.5rem",
                       }}
                     />
