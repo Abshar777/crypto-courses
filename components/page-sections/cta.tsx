@@ -24,11 +24,11 @@ const Cta = () => {
       >
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-12">
           <div className="flex flex-col justify-between items-center w-full md:w-1/2 gap-8 z-10">
-            <h2 className="text-4xl text-center  text-nowrap font-bold text-white">
+            <h2 className="text-4xl text-center  md:text-nowrap font-bold text-white">
               Powered by{" "}
               <br />
               <span className="relative z-10 uppercase text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 via-purple-400 to-cyan-400 animate-gradient">
-              Delta International Institute
+              Delta  International Institute
               </span>
             </h2>
             <p className="text-white/80 max-w-md">
