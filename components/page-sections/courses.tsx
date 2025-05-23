@@ -42,7 +42,7 @@ const Courses = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
-              title: "Crypto Mania",
+              title: "Crypto Genesis",
               level: "Beginner Level Program",
               lessons: 24,
               offer: "25% off",
