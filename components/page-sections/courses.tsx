@@ -59,7 +59,7 @@ const Courses = () => {
                 "Crypto Wallets",
                 "Market Analysis",
                 "Security Basics",
-                "Onchain analsis",
+         
                 "Airdrops",
                 "ICO",
               ],
