@@ -168,7 +168,7 @@ const Courses = () => {
                     >
                       <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-fuchsia-600 to-cyan-400"></span>
                       <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-fuchsia-600 to-cyan-400 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
-                      <span className="relative z-10">Enroll Now</span>
+                      <span className="relative z-10">Read More</span>
                     </Button>
                   </div>
                 </CardContent>
