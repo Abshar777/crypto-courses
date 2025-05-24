@@ -26,6 +26,7 @@ jobs:
         script: |
           cd crypto-courses/
           git pull origin main
-          npm i
+          npm i -f
           npm run build
           pm2 restart all 
+
